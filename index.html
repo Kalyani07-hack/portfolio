@@ -1,206 +1,371 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kalyani Rane — Data Analyst Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF9F6;
+    --ink:#10233B;
+    --ink-soft:#51606F;
+    --line:#E2DFD6;
+    --card:#FFFFFF;
+    --teal:#1F6F76;
+    --teal-bg:#E7F1F0;
+    --amber:#B9781F;
+    --amber-bg:#F6EBD8;
+    --slate:#3B5A7A;
+    --slate-bg:#E9EEF3;
+    --maxw:920px;
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]){ }
+  *{box-sizing:inherit;}
+  html{scroll-behavior:smooth; scroll-padding-top: calc(64px + env(safe-area-inset-top,0px));}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans", system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Space Grotesk", system-ui, sans-serif; margin:0; letter-spacing:-0.01em;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  /* NAV */
+  nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(250,249,246,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto; padding:16px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-name{font-family:"Space Grotesk"; font-weight:600; font-size:16px;}
+  .nav-links{display:flex; gap:28px; font-size:14px; color:var(--ink-soft);}
+  .nav-links a{text-decoration:none; transition:color .15s ease;}
+  .nav-links a:hover{color:var(--ink);}
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Kalyani Rane | Data Analytics Portfolio</h1>
-							<p>On a journey to turn curiosity for data into real skills and insights.<br />
-							Building a strong foundation in analytics through hands-on projects and continuous learning</a>.</p>							
-						</div>
-					</section>
+  /* HERO */
+  header.hero{padding:72px 0 56px;}
+  .hero-grid{display:grid; grid-template-columns:1.3fr 0.9fr; gap:40px; align-items:center;}
+  .eyebrow{font-family:"IBM Plex Mono"; font-size:13px; color:var(--teal); margin-bottom:14px;}
+  h1.headline{font-size:clamp(32px,4.4vw,46px); line-height:1.14; font-weight:700; max-width:12ch;}
+  .hero p.lede{margin-top:18px; font-size:17px; line-height:1.6; color:var(--ink-soft); max-width:46ch;}
+  .hero-actions{margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 20px; border-radius:2px; font-size:14px; font-weight:500;
+    text-decoration:none; border:1px solid var(--ink);
+  }
+  .btn.primary{background:var(--ink); color:var(--bg);}
+  .btn.ghost{color:var(--ink); background:transparent;}
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/bike.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Bike Sales Dashboard</h2>
-									<p>Analyzed bike sales data in Excel to identify customer trends, demographics, and purchasing patterns using pivot tables and interactive dashboards.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/bikeSales" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/net.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Netflix Analysis</h2>
-									<p>Analyzed Netflix dataset using Excel to explore content trends, genres, and release patterns with pivot tables, charts, and visual insights.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/NetflixAnalysis" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/airbnb.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>AirBnB Analysis</h2>
-									<p>Analyze Airbnb listing prices, locations, host behavior, and customer patterns.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/AirBnbProject" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/layoff.png" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Data Cleaning Using SQL</h2>
-									<p>Cleaned and transformed a layoffs dataset using SQL by removing duplicates, standardizing data, and handling null values for accurate analysis.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/DataCleaningSQL" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/eda.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>EDA Using SQL</h2>
-									<p>Conducted EDA on a layoffs dataset using SQL to identify key trends, patterns, and insights related to companies, industries, and time periods.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/EDAsql" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/powerbi.png" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Real Survey Analysis</h2>
-									<p>Analyzed real survey data using Power BI to uncover participant insights, visualize response patterns, and highlight key trends through interactive dashboards</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/RealSurveyAnalysis" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>		
-						<section>
-							<a href="#" class="image"><img src="images/amazon.png" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Amazon Webscraping</h2>
-									<p>Built a web scraping tool to collect and analyze Amazon product data (names, prices, ratings) using Python libraries like BeautifulSoup and requests for data-driven insights.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/AmazonWebscaping" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>			
-						<section>
-							<a href="#" class="image"><img src="images/pythonclean.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Data Cleaning Using Python</h2>
-									<p>Cleaned and prepared a customer call dataset using Python (Pandas) by removing inconsistencies, handling null values, and ensuring data accuracy for further analysis.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/DataCleaningPandas" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>														
-						<section>
-							<a href="#" class="image"><img src="images/pythoneda.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>EDA using Python</h2>
-									<p>Analyzed global population data using Python to explore growth patterns, regional trends, and demographic insights through visualizations.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/EDApandas" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/coffee.jpeg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Coffee Revenue Analysis</h2>
-									<p>This project analyzes coffee shop sales data using SQL to identify revenue patterns, customer purchase behavior, and product performance. The goal is to convert raw transactional data into actionable insights that can help improve business decisions such as pricing, inventory planning, and peak-hour staffing.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/Kalyani07-hack/CoffeeSales.git" class="button">View Project</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+  .hero-chart{width:100%; height:auto;}
 
-				<!-- Two -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<span>Kalyani Prashant Rane</span>
-											</div>
-										</div>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>Mumbai, Maharastra<br /> </span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">Kalyanirane2005@gmail.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>7021251600</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/Kalyani07-hack" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="https://www.linkedin.com/in/kalyani-rane-6b46822b5/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+  /* STAT STRIP */
+  .stats{
+    margin-top:52px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    display:grid; grid-template-columns:repeat(4,1fr);
+  }
+  .stat{padding:18px 22px; border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:"Space Grotesk"; font-weight:700; font-size:22px;}
+  .stat .lbl{font-size:12.5px; color:var(--ink-soft); margin-top:4px;}
 
-			</div>
+  /* SECTION */
+  section{padding:64px 0;}
+  .section-head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:28px; gap:16px;}
+  .section-head h2{font-size:24px; font-weight:600;}
+  .section-index{font-family:"IBM Plex Mono"; font-size:12.5px; color:var(--ink-soft);}
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  /* ABOUT */
+  #about .about-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:48px;}
+  #about p{font-size:16px; line-height:1.75; color:var(--ink-soft);}
+  .facts{border-left:2px solid var(--line); padding-left:20px; display:flex; flex-direction:column; gap:14px;}
+  .facts div{font-size:14px;}
+  .facts span{display:block; font-size:12px; color:var(--ink-soft); margin-bottom:2px;}
 
-	</body>
+  /* SKILLS */
+  .skill-group{margin-bottom:26px;}
+  .skill-group h3{font-size:14px; font-weight:600; margin-bottom:12px; color:var(--ink);}
+  .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    font-size:13px; padding:7px 13px; border-radius:2px; border:1px solid var(--line);
+    background:var(--card); color:var(--ink-soft);
+  }
+  .skill-group.prog .chip{border-color:var(--teal); color:var(--teal); background:var(--teal-bg);}
+  .skill-group.bi .chip{border-color:var(--amber); color:var(--amber); background:var(--amber-bg);}
+  .skill-group.data .chip{border-color:var(--slate); color:var(--slate); background:var(--slate-bg);}
 
+  /* PROJECTS */
+  .project{
+    display:grid; grid-template-columns:64px 1fr; gap:22px;
+    padding:26px 0; border-top:1px solid var(--line);
+  }
+  .project:last-child{border-bottom:1px solid var(--line);}
+  .p-icon{width:44px; height:44px; border-radius:2px; display:flex; align-items:center; justify-content:center;}
+  .p-icon svg{width:24px; height:24px;}
+  .p-head{display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+  .p-title{font-size:18px; font-weight:600; font-family:"Space Grotesk";}
+  .p-tag{font-family:"IBM Plex Mono"; font-size:11.5px; color:var(--ink-soft);}
+  .p-desc{margin-top:8px; font-size:15px; line-height:1.65; color:var(--ink-soft); max-width:62ch;}
+  .p-links{margin-top:12px; display:flex; gap:18px;}
+  .p-links a{font-size:13.5px; text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px;}
+
+  .cat-teal .p-icon{background:var(--teal-bg); color:var(--teal);}
+  .cat-amber .p-icon{background:var(--amber-bg); color:var(--amber);}
+  .cat-slate .p-icon{background:var(--slate-bg); color:var(--slate);}
+  .cat-teal .p-links a{color:var(--teal);}
+  .cat-amber .p-links a{color:var(--amber);}
+  .cat-slate .p-links a{color:var(--slate);}
+  .cat-teal .p-award, .cat-amber .p-award{font-size:11.5px; font-weight:600; padding:3px 8px; border-radius:2px;}
+  .p-award{background:var(--amber-bg); color:var(--amber); font-family:"IBM Plex Mono"; font-size:11px; padding:3px 9px; border-radius:2px;}
+
+  /* CERTS */
+  .certs{display:grid; grid-template-columns:1fr 1fr; gap:10px 32px;}
+  .cert{display:flex; justify-content:space-between; gap:12px; padding:12px 0; border-bottom:1px solid var(--line); font-size:14px;}
+  .cert .c-name{font-weight:500;}
+  .cert .c-org{color:var(--ink-soft); font-size:13px; white-space:nowrap;}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line); padding:48px 0 60px;}
+  .foot-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:32px; align-items:start;}
+  footer h2{font-size:22px; margin-bottom:10px;}
+  footer p{color:var(--ink-soft); font-size:15px; line-height:1.6; max-width:38ch;}
+  .foot-links{display:flex; flex-direction:column; gap:10px; font-size:14px;}
+  .foot-links a{text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px; width:fit-content;}
+  .copyright{margin-top:40px; font-size:12.5px; color:var(--ink-soft); font-family:"IBM Plex Mono";}
+
+  @media (max-width:760px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-chart{max-width:280px; margin:0 auto;}
+    .stats{grid-template-columns:1fr 1fr;}
+    .stat{border-bottom:1px solid var(--line);}
+    #about .about-grid{grid-template-columns:1fr;}
+    .facts{border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:16px; flex-direction:row; flex-wrap:wrap; gap:20px;}
+    .project{grid-template-columns:44px 1fr;}
+    .certs{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+  }
+
+  :focus-visible{outline:2px solid var(--teal); outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name">Kalyani Rane</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Data Analyst · Business Intelligence</div>
+      <h1 class="headline">I turn messy data into dashboards people actually use.</h1>
+      <p class="lede">Computer Engineering student building end-to-end analysis — from raw data cleaning in SQL and Python to KPI design and dashboards in Power BI and Tableau.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn ghost" href="mailto:kalyanirane2005@gmail.com">Get in touch</a>
+      </div>
+    </div>
+    <svg class="hero-chart" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract dashboard chart illustration">
+      <rect x="0" y="0" width="320" height="260" rx="4" fill="#FFFFFF" stroke="#E2DFD6"/>
+      <line x1="24" y1="190" x2="296" y2="190" stroke="#E2DFD6" stroke-width="1"/>
+      <rect x="40" y="120" width="26" height="70" fill="#E7F1F0"/>
+      <rect x="40" y="150" width="26" height="40" fill="#1F6F76"/>
+      <rect x="90" y="90" width="26" height="100" fill="#F6EBD8"/>
+      <rect x="90" y="140" width="26" height="50" fill="#B9781F"/>
+      <rect x="140" y="60" width="26" height="130" fill="#E9EEF3"/>
+      <rect x="140" y="110" width="26" height="80" fill="#3B5A7A"/>
+      <rect x="190" y="100" width="26" height="90" fill="#E7F1F0"/>
+      <rect x="190" y="145" width="26" height="45" fill="#1F6F76"/>
+      <polyline points="53,110 103,80 153,50 203,90 253,65" fill="none" stroke="#10233B" stroke-width="2"/>
+      <circle cx="253" cy="65" r="4" fill="#10233B"/>
+      <rect x="24" y="24" width="90" height="10" rx="2" fill="#E2DFD6"/>
+      <rect x="24" y="42" width="56" height="8" rx="2" fill="#E2DFD6"/>
+    </svg>
+  </div>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="num">8.945</div><div class="lbl">CGPA, B.E. Computer Engineering</div></div>
+      <div class="stat"><div class="num">3rd</div><div class="lbl">Place — IES MCRC Hackathon 3.0</div></div>
+      <div class="stat"><div class="num">6</div><div class="lbl">Data & BI certifications</div></div>
+      <div class="stat"><div class="num">2027</div><div class="lbl">Expected graduation</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-head"><h2>About</h2><span class="section-index">01</span></div>
+      <p>I'm a final-year Computer Engineering student at Vidyavardhini's College of Engineering and Technology, focused on data analysis and business intelligence. I like taking a messy, raw dataset and following it all the way through — cleaning it in Python or SQL, engineering the KPIs that matter, and shaping the result into a dashboard someone can actually make a decision from.</p>
+      <p style="margin-top:16px;">Most of my project work sits at the intersection of SQL, Python, and Power BI, applied to problems like flight delays, retail revenue, and workforce layoffs — grounded in real, messy public datasets rather than tutorials.</p>
+    </div>
+    <div class="facts">
+      <div><span>Location</span>Mumbai, Maharashtra</div>
+      <div><span>Education</span>B.E. Computer Engineering, VCET</div>
+      <div><span>Coursework</span>ADBMS, DSA, Statistics & Probability</div>
+      <div><span>Focus</span>SQL · Python · Power BI · Tableau</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head"><h2>Skills</h2><span class="section-index">02</span></div>
+
+    <div class="skill-group prog">
+      <h3>Programming & Databases</h3>
+      <div class="chips">
+        <span class="chip">SQL — Window Functions, CTEs, Views</span>
+        <span class="chip">Python — Pandas, NumPy, Matplotlib</span>
+        <span class="chip">BeautifulSoup</span>
+        <span class="chip">MySQL</span>
+        <span class="chip">PostgreSQL</span>
+      </div>
+    </div>
+
+    <div class="skill-group bi">
+      <h3>BI & Visualization</h3>
+      <div class="chips">
+        <span class="chip">Power BI</span>
+        <span class="chip">Tableau</span>
+        <span class="chip">Excel — PivotTables, Power Query</span>
+        <span class="chip">Google Sheets</span>
+      </div>
+    </div>
+
+    <div class="skill-group data">
+      <h3>Data & Analytics</h3>
+      <div class="chips">
+        <span class="chip">Data Pipelines — Ingestion & Cleaning</span>
+        <span class="chip">KPI Engineering</span>
+        <span class="chip">Exploratory Data Analysis</span>
+        <span class="chip">Dashboard Design</span>
+        <span class="chip">Statistical Analysis</span>
+        <span class="chip">BI Reporting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head"><h2>Selected projects</h2><span class="section-index">03</span></div>
+
+    <div class="project cat-slate">
+      <div class="p-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 17l5-6 4 4 6-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="p-head">
+          <span class="p-title">Flight Delay Analysis</span>
+          <span class="p-tag">Python · MySQL · Power BI · 2026</span>
+        </div>
+        <p class="p-desc">Built an ETL workflow in Pandas to clean raw flight records, then engineered five weighted KPIs — including a Delay Risk Index and Route Stability score — using SQL window functions. Shipped as an interactive Power BI dashboard ranking airline and route performance.</p>
+        <div class="p-links"><a href="https://github.com/Kalyani07-hack/FlightDelay" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </div>
+    </div>
+
+    <div class="project cat-amber">
+      <div class="p-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="4" height="10" stroke="currentColor" stroke-width="2"/><rect x="10" y="4" width="4" height="16" stroke="currentColor" stroke-width="2"/><rect x="16" y="13" width="4" height="7" stroke="currentColor" stroke-width="2"/></svg>
+      </div>
+      <div>
+        <div class="p-head">
+          <span class="p-title">IES MCRC Hackathon 3.0 — Dual Dashboards <span class="p-award">3rd Place</span></span>
+          <span class="p-tag">Power BI · 2025</span>
+        </div>
+        <p class="p-desc">Designed two dashboards under hackathon time pressure: a Finance Health & Budget Tracker analyzing income, expense, and savings across categories, and a Real-Time Retail Sales dashboard tracking revenue and store-wise performance.</p>
+        <div class="p-links"><a href="https://github.com/Kalyani07-hack/hackathonprojects" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </div>
+    </div>
+
+    <div class="project cat-teal">
+      <div class="p-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 4v16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 15l3-4 3 3 4-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <div class="p-head">
+          <span class="p-title">Coffee Shop Revenue Analysis</span>
+          <span class="p-tag">SQL · 2025</span>
+        </div>
+        <p class="p-desc">Analyzed a year of transaction data across two machines (UAH 85,830 in revenue) using SQL views, CTEs, and CASE WHEN segmentation to break down sales by time slot, product, and machine — packaged into a stakeholder-ready presentation.</p>
+        <div class="p-links"><a href="https://github.com/Kalyani07-hack/CoffeeSales" target="_blank" rel="noopener">View on GitHub →</a></div>
+      </div>
+    </div>
+
+    <div class="project cat-slate">
+      <div class="p-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="p-head">
+          <span class="p-title">Global Tech Layoffs Analysis</span>
+          <span class="p-tag">SQL · EDA · 2025</span>
+        </div>
+        <p class="p-desc">Cleaned a large, messy layoffs dataset — removing duplicates, standardizing formats, handling nulls — then used CTEs, DENSE_RANK(), and rolling SUM() to surface industry-wise layoff patterns and rank the top five companies by layoffs per year.</p>
+        <div class="p-links">
+          <a href="https://github.com/Kalyani07-hack/DataCleaningSQL" target="_blank" rel="noopener">Data cleaning →</a>
+          <a href="https://github.com/Kalyani07-hack/EDAsql" target="_blank" rel="noopener">EDA →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head"><h2>Certifications</h2><span class="section-index">04</span></div>
+    <div class="certs">
+      <div class="cert"><span class="c-name">Cleaning Data with Generative AI</span><span class="c-org">DataCamp, Jun 2026</span></div>
+      <div class="cert"><span class="c-name">SQL (Basic) Certificate</span><span class="c-org">HackerRank, Mar 2026</span></div>
+      <div class="cert"><span class="c-name">Power BI Report Design</span><span class="c-org">Udemy, Feb 2026</span></div>
+      <div class="cert"><span class="c-name">Data Analysis Job Simulation</span><span class="c-org">Deloitte / Forage, Apr 2025</span></div>
+      <div class="cert"><span class="c-name">Gen AI Powered Data Analysis</span><span class="c-org">Tata / Forage, Jul 2025</span></div>
+      <div class="cert"><span class="c-name">Data Analysis Bootcamp</span><span class="c-org">Alex The Analyst, 2025</span></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap foot-grid">
+    <div>
+      <h2>Let's talk data.</h2>
+      <p>Open to Business Intelligence and Data Analyst internships. Reach out by email or connect on LinkedIn — I usually reply within a day.</p>
+    </div>
+    <div class="foot-links">
+      <a href="mailto:kalyanirane2005@gmail.com">kalyanirane2005@gmail.com</a>
+      <a href="tel:+917021251600">+91 70212 51600</a>
+      <a href="https://www.linkedin.com/in/kalyani-rane-6b46822b5/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Kalyani07-hack" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="wrap copyright">Kalyani Prashant Rane · Mumbai, Maharashtra</div>
+</footer>
+
+</body>
 </html>
